@@ -1,7 +1,24 @@
 {
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.0-beta3",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1"
-  }
+    "jquery": "^3.6.0"
+  },
+  "name": "my-site",
+  "description": "$ npm install bootstrap@next $ npm install jquery $ npm install popper.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18Buchi/my-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/18Buchi/my-site/issues"
+  },
+  "homepage": "https://github.com/18Buchi/my-site#readme"
 }

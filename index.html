@@ -8,22 +8,46 @@
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <title>Document</title>
+    <title>My-site</title>
   </head>
   <body>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-
-    <button type="button" class="btn btn-link">Link</button>
+    <div id="box"></div>
+    <div class="card"></div>
+    <!-- <div class="card" style="width: 18rem">
+      <img src="" class="card-img-top" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">購入する!!</a>
+      </div> -->
+    </div>
+    <h1></h1>
 
     <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      var imgSrc = "./image/sample15.png";
+      var nam = [
+        {src:"./image/sample15.png", name:"Buchi-T"},
+        {src:"./image/sample15.png", name:"Buchi-T"},
+        {src:"./image/sample15.png", name:"Buchi-T"},
+        
+      ];
+
+      for (var i = 0; i < nam.length; i++) {
+        $("<img>").attr("src", nam[i].src).attr("art", "Buchi-T").prependTo(".card");
+        $("<h5>").text(nam[i].name).appendTo("img");
+    
+      }
+
+      $('<div><p>qqq</p>{nam[i].name}</div>').appendTo('#box');
+
+      console.log(nam[i].src);
+      console.log(nam[i].name);
+
+      // $("img").attr("src", imgSrc).attr("art", "Buchi-T").prependTo(".card");
+      // $("h5.card-title").text(imgSrc);
+    </script>
   </body>
 </html>
