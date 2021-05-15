@@ -1,0 +1,32 @@
+.c-mainIcon{
+height: 50px;
+}
+
+.c-container{
+  margin: 110px auto;
+  width: 800px;
+}
+
+.c-contents{
+  display: block;
+  margin: 30px auto;
+  width: 750px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 6px 6px 2px 1px rgba(145, 145, 145, 0.2);
+  opacity: 0.6;
+}
+
+.c-contents:hover{
+  opacity: 1;
+}
+
+
+@media (max-width: 991.98px) { 
+  .c-container{
+    width: 92%;
+  }
+  .c-contents{
+    width: 88%;
+  }
+}
