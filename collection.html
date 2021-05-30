@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./css/costom.css" />
     <title>My-site</title>
   </head>
-
   <body>
     <!-- ヘッダー -->
     <header>
@@ -44,13 +43,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a
                   class="nav-link active twitter"
                   aria-current="page"
-                  href="#"
-                ></a>
-              </li> -->
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"
                   ><i class="fab fa-twitter-square"> twitter</i></a
@@ -89,73 +89,54 @@
     </header>
     <!-- ヘッダー -->
 
-    <div class="c-container">
-      <!-- トップスライド -->
-
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="./image/topImage/top.jpg"
-              class="d-block w-100"
-              alt="topImage1"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./image/topImage/blue.jpg"
-              class="d-block w-100"
-              alt="topImage2"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./image/topImage/green.jpg"
-              class="d-block w-100"
-              alt="topImage3"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./image/topImage/red.jpg"
-              class="d-block w-100"
-              alt="topImage4"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- トップスライド -->
-      <!-- コンテンツ -->
-      <div>
-        <a href="./collection.html">
-          <img
-            class="c-contents"
-            src="./image/contents/Designcollection.png"
-            alt="デザインページリンク"
-          />
-        </a>
-      </div>
-      <div>
-        <img
-          class="c-contents"
-          src="./image/contents/Notready.png"
-          alt="準備中"
-        />
-      </div>
-      <!-- コンテンツ -->
+    <div class="c-container mx-auto" style="width: 70%">
+      <div class="c-items"></div>
     </div>
 
     <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      let items = [
+        { src: "./image/sample6.png", title: "SLEEPYSHEEEP", link: "#" },
+        { src: "./image/sample8.png", title: "セル・ライト", link: "#" },
+        { src: "./image/sample9.png", title: "リック・メタボ", link: "#" },
+        { src: "./image/sample10.png", title: "KILROY", link: "#" },
+        { src: "./image/sample11.png", title: "LIVIG DECK", link: "#" },
+        { src: "./image/sample12.png", title: "GREATFUL PEACE", link: "#" },
+        { src: "./image/sample13.png", title: "SLEEPYFACE", link: "#" },
+        { src: "./image/sample14.png", title: "@NEWYORK@TOKYO", link: "#" },
+        { src: "./image/sample15.png", title: "Buchi-T", link: "#" },
+      ];
+
+      $(function () {
+        for (let i = 0; i < items.length; i++) {
+          $("<img>")
+            .attr("src", items[i].src)
+            .attr("art", items[i].title)
+            .addClass(
+              "card-img-top shadow-sm p-3 mt-5 mb-1 bg-white rounded position-relative"
+            )
+            .appendTo(".c-items");
+          $("<h5>")
+            .addClass("card-title d-inline-block w-50 mt-2")
+            .text(items[i].title)
+            .appendTo(".c-items");
+          $("<a>")
+            .addClass("btn btn-secondary d-inline-block float-end")
+            .text("購入する!!")
+            .attr("href", items[i].link)
+            .appendTo(".c-items");
+          // $(".card-img-top, .card-title, .btn btn-primary")
+          //   .wrapAll("<div>")
+          //   .appendTo(".c-items");
+          // console.log(cards[i]);
+        }
+      });
+    </script>
     <script
       src="https://kit.fontawesome.com/41c4b13d5c.js"
       crossorigin="anonymous"
     ></script>
-    <script></script>
   </body>
 </html>
