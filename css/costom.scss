@@ -1,8 +1,8 @@
-.c-mainIcon{
-height: 50px;
+.c-mainIcon {
+  height: 50px;
 }
 
-.c-container{
+.c-container {
   margin: 110px auto;
   width: 800px;
 }
@@ -17,16 +17,19 @@ height: 50px;
   opacity: 0.6;
 }
 
-.c-contents:hover{
+.c-contents:hover {
   opacity: 1;
 }
 
+.c-article {
+  margin: 0 3% 0 8%;
+}
 
-@media (max-width: 991.98px) { 
-  .c-container{
+@media (max-width: 991.98px) {
+  .c-container {
     width: 92%;
   }
-  .c-contents{
+  .c-contents {
     width: 88%;
   }
 }

@@ -22,6 +22,10 @@
   opacity: 1;
 }
 
+.c-article {
+  margin: 0 3% 0 8%;
+}
+
 @media (max-width: 991.98px) {
   .c-container {
     width: 92%;
