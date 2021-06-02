@@ -44,13 +44,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
-                <a
-                  class="nav-link active twitter"
-                  aria-current="page"
-                  href="#"
-                ></a>
-              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="#"
                   ><i class="fab fa-twitter-square"> twitter</i></a
@@ -150,13 +143,55 @@
 
       <!-- Article -->
       <article class="c-article">
-        <h5>
-          <ol id="lists"></ol>
-        </h5>
-        <button id="addBtn" class="btn btn-secondary d-inline-block float-end">
-          add
-        </button>
-        <div class="c-text">aa</div>
+        <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <ul class="dropdown-menu dropdown-menu-end" tabindex="0">
+                <li><a class="dropdown-item" href="#1">Top</a></li>
+                <li><a class="dropdown-item" href="#20">20.</a></li>
+                <li><a class="dropdown-item" href="#40">40.</a></li>
+                <li><a class="dropdown-item" href="#60">60.</a></li>
+                <li><a class="dropdown-item" href="#80">80.</a></li>
+                <li><a class="dropdown-item" href="#100">Last</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="c-article-titles"
+          data-bs-target="#navbar-example2"
+          data-bs-offset="0"
+          tabindex="0"
+        >
+          <h5 class="c-article-text">
+            <ol id="lists"></ol>
+          </h5>
+        </div>
+
+        <div class="card c-card">
+          <img
+            src="https://unsplash.it/g/700/400/"
+            class="card-img-top"
+            alt="placeholder"
+          />
+          <div class="card-body c-card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">とじる</a>
+          </div>
+        </div>
       </article>
       <!-- Article -->
     </div>
