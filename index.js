@@ -1,5 +1,9 @@
 // const button = document.getElementById("addBtn");
 const lists = document.getElementById("lists");
+const close = document.getElementById("close");
+const popUpTitle = document.getElementById("popup-title");
+const popUpText = document.getElementById("popup-text");
+const popCard = document.getElementById("c-card");
 
 window.addEventListener("load", async function () {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -11,5 +15,21 @@ window.addEventListener("load", async function () {
     list.setAttribute("class", "list-wrapper");
     list.setAttribute("id", post.id);
     lists.appendChild(list);
+
+    const listId = document.getElementById(post.id);
+    listId.addEventListener("click", async function (e) {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const posts = await res.json();
+      let getId = e.target.id;
+      const post = posts[getId - 1];
+
+      popCard.classList.add("c-show-card");
+      popUpTitle.innerText = post.title;
+      popUpText.innerText = post.body;
+    });
   }
+});
+
+close.addEventListener("click", function () {
+  popCard.classList.remove("c-show-card");
 });

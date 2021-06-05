@@ -98,6 +98,7 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
       let items = [
+        { src: "./image/sample16.png", title: "spoopywound", link: "#" },
         { src: "./image/sample6.png", title: "SLEEPYSHEEEP", link: "#" },
         { src: "./image/sample8.png", title: "セル・ライト", link: "#" },
         { src: "./image/sample9.png", title: "リック・メタボ", link: "#" },
@@ -119,12 +120,12 @@
             )
             .appendTo(".c-items");
           $("<h5>")
-            .addClass("card-title d-inline-block w-50 mt-2")
+            .addClass("d-inline-block c-card-text w-75 mt-2")
             .text(items[i].title)
             .appendTo(".c-items");
           $("<a>")
-            .addClass("btn btn-secondary d-inline-block float-end")
-            .text("購入する!!")
+            .addClass("btn btn-secondary d-inline-block float-end btn-sm  mt-1")
+            .text("詳細を見る!!")
             .attr("href", items[i].link)
             .appendTo(".c-items");
           // $(".card-img-top, .card-title, .btn btn-primary")

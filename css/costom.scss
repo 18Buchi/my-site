@@ -14,60 +14,68 @@
   width: 800px;
 }
 
-.c-contents {
-  display: block;
-  margin: 30px auto;
-  width: 750px;
-  border: 1px solid black;
-  border-radius: 20px;
-  box-shadow: 6px 6px 2px 1px rgba(145, 145, 145, 0.2);
-  opacity: 0.6;
-}
 
-.c-contents:hover {
-  opacity: 1;
-}
+  .c-contents {
+    display: block;
+    margin: 30px auto;
+    width: 750px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 6px 6px 2px 1px rgba(145, 145, 145, 0.2);
+    opacity: 0.6;
+  }
 
-.c-article {
-  margin: 0 5% 0 5%;
-  padding-bottom: 30px;
-  box-shadow: 3px 3px 1px 1px rgba(145, 145, 145, 0.1);
-  border-radius: 5px;
-}
-.c-article-titles {
-  height: 600px;
-  overflow-y: scroll;
-}
-.c-article-text {
-  width: 90%;
-  margin: 0 auto;
-}
+  .c-contents:hover {
+    opacity: 1;
+  }
 
-.list-wrapper {
-  padding: 10px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  box-shadow: 3px 3px 1px 1px rgba(145, 145, 145, 0.1);
-  // list-style-position:inside ;
-}
 
-.list-wrapper:hover {
-  background: rgba(207, 207, 255, 0.3);
-  cursor: pointer;
-}
+article {
+  .c-article {
+    margin: 0 5% 0 5%;
+    padding-bottom: 30px;
+    box-shadow: 3px 3px 1px 1px rgba(145, 145, 145, 0.1);
+    border-radius: 5px;
+  }
+  .c-article-titles {
+    height: 300px;
+    overflow-y: scroll;
+  }
+  .c-article-text {
+    width: 90%;
+    margin: 0 auto;
+  }
 
-.c-card {
-  width: 80%;
-  background: rgb(206, 202, 202);
-  position: fixed;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
+  .list-wrapper {
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px 1px rgba(145, 145, 145, 0.1);
+    // list-style-position:inside ;
+  }
 
-.blue {
-  background: blue;
+  .list-wrapper:hover {
+    background: rgba(207, 207, 255, 0.3);
+    cursor: pointer;
+  }
+
+  .c-card {
+    width: 80%;
+    background: rgb(206, 202, 202);
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .c-show-card {
+    display: block;
+  }
+
+  .c-card-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 991.98px) {
