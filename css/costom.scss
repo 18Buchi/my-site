@@ -12,6 +12,15 @@
 .c-container {
   margin: 110px auto;
   width: 800px;
+ 
+}
+
+.c-conNone{
+  pointer-events: none;
+  user-select: none;
+opacity: .1;
+
+
 }
 
 
@@ -23,6 +32,7 @@
     border-radius: 20px;
     box-shadow: 6px 6px 2px 1px rgba(145, 145, 145, 0.2);
     opacity: 0.6;
+    
   }
 
   .c-contents:hover {
@@ -43,7 +53,7 @@ article {
   }
   .c-article-text {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 
   .list-wrapper {
@@ -59,23 +69,25 @@ article {
     cursor: pointer;
   }
 
-  .c-card {
-    width: 80%;
-    background: rgb(206, 202, 202);
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
 
-  .c-show-card {
-    display: block;
-  }
+}
+.c-card {
+  width: 80%;
+  background: rgb(243, 242, 242);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 2px 2px rgba(145, 145, 145, 0.3);
+  display: none;
+}
 
-  .c-card-text {
-    font-size: 1rem;
-  }
+.c-show-card {
+  display: block;
+}
+
+.c-card-text {
+  font-size: 1rem;
 }
 
 @media (max-width: 991.98px) {

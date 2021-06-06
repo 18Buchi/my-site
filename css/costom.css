@@ -15,6 +15,15 @@
   width: 800px;
 }
 
+.c-conNone {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: .1;
+}
+
 .c-contents {
   display: block;
   margin: 30px auto;
@@ -45,7 +54,7 @@ article .c-article-titles {
 
 article .c-article-text {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 article .list-wrapper {
@@ -61,22 +70,24 @@ article .list-wrapper:hover {
   cursor: pointer;
 }
 
-article .c-card {
+.c-card {
   width: 80%;
-  background: #cecaca;
+  background: #f3f2f2;
   position: fixed;
-  top: 35%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-box-shadow: 4px 4px 2px 2px rgba(145, 145, 145, 0.3);
+          box-shadow: 4px 4px 2px 2px rgba(145, 145, 145, 0.3);
   display: none;
 }
 
-article .c-show-card {
+.c-show-card {
   display: block;
 }
 
-article .c-card-text {
+.c-card-text {
   font-size: 1rem;
 }
 
