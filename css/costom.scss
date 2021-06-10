@@ -66,16 +66,15 @@ article {
 .c-card {
   width: 80%;
   max-width: 600px;
+  max-height: 70%;
   background: rgb(243, 242, 242);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 4px 4px 2px 2px rgba(145, 145, 145, 0.3);
+  overflow: scroll;
   display: none;
-}
-
-.c-card {
   img {
     max-width: 600px;
     max-height: 600px;
@@ -97,4 +96,9 @@ article {
   .c-contents {
     width: 88%;
   }
+  // .c-card {
+  //   img {
+  //   max-width: 50%;
+  //   }
+  // }
 }

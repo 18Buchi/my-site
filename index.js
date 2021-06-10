@@ -35,7 +35,6 @@ window.addEventListener("load", async function () {
       popUpTitle.innerText = post.title;
       popUpText.innerText = post.body;
       image.setAttribute("src", photo.url);
-      console.log(photo.url);
     });
   }
 });
