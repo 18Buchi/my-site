@@ -1,0 +1,66 @@
+.g-container {
+  margin: 110px auto;
+  width: 800px;
+}
+
+.touchPanelBase {
+  background: #ccc;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  height: 300px;
+}
+
+#touchPanel {
+  width: 120px;
+  margin: 16px auto;
+}
+
+#board {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    background: #0af;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 0 4px 0 #08c;
+    user-select: none;
+  }
+  li.pressed {
+    background: #ccc;
+    box-shadow: none;
+    margin: 9px 5px 1px;
+  }
+}
+
+#timer {
+  margin-bottom: 8px;
+  font-size: 20px;
+  text-align: right;
+}
+
+#touchPanelButton {
+  cursor: pointer;
+  user-select: none;
+  background: #f44336;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 0 #d1483e;
+}
+#touchPanelButton:active {
+  margin-top: 12px;
+  box-shadow: none;
+}
