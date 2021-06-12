@@ -1,4 +1,4 @@
-# npm インストール
+# インストール
 
 $ npm install bootstrap@next
 $ npm install jquery
