@@ -5,6 +5,7 @@
       this.game = game;
       this.el = document.createElement("li");
       this.el.classList.add("pressed");
+
       this.el.addEventListener("click", () => {
         this.check();
       });
@@ -118,6 +119,16 @@
       return this.level;
     }
   }
+  let lv = 2;
+  const touchLevelButton = document.getElementById("touchLevelButton");
+  touchLevelButton.addEventListener("click", () => {
+    lv++;
+    let board = document.getElementById("board");
+    while (board.lastChild) {
+      board.removeChild(board.lastChild);
+    }
 
-  new Game(4);
+    new Game(lv);
+  });
+  new Game(lv);
 }
