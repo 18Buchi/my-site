@@ -1,13 +1,18 @@
 "use strict";
 {
   class Panel {
-    constructor(game) {
+    constructor(game, Lv) {
       this.game = game;
+      this.Lv = Lv;
       this.el = document.createElement("li");
       this.el.classList.add("pressed");
+      console.log("foo");
+      console.log(this.game.getLevel());
+      // console.log(this.Lv.getFoo());
 
       this.el.addEventListener("click", () => {
         this.check();
+        
       });
     }
 
@@ -24,15 +29,16 @@
         this.game.addCurrentNum();
         if (this.game.getCurrentNum() === this.game.getLevel() ** 2) {
           clearTimeout(this.game.getTimeoutId());
-          console.log(this.currentNum);
         }
       }
     }
   }
 
   class Board {
-    constructor(game) {
+    constructor(game,Lv) {
       this.game = game;
+      this.Lv = Lv;
+
       this.panels = [];
       for (let i = 0; i < this.game.getLevel() ** 2; i++) {
         this.panels.push(new Panel(this.game));
@@ -63,10 +69,9 @@
   }
 
   class Game {
-    constructor(level) {
-      this.level = level;
+    constructor() {
+      this.level = 2;
       this.board = new Board(this);
-
       this.currentNum = undefined;
       this.startTime = undefined;
       this.timeoutId = undefined;
@@ -119,16 +124,25 @@
       return this.level;
     }
   }
-  let lv = 2;
-  const touchLevelButton = document.getElementById("touchLevelButton");
-  touchLevelButton.addEventListener("click", () => {
-    lv++;
-    let board = document.getElementById("board");
-    while (board.lastChild) {
-      board.removeChild(board.lastChild);
-    }
 
-    new Game(lv);
-  });
-  new Game(lv);
+  class Lv {
+    constructor(game) {
+      this.game = game;
+      this.foo = undefined;
+      const touchLevelButton = document.getElementById("touchLevelButton");
+      touchLevelButton.addEventListener("click", () => {
+        let board = document.getElementById("board");
+        while (board.lastChild) {
+          board.removeChild(board.lastChild);
+          console.log(this.game.getLevel());
+        }
+        new Game(this.nextLevel);
+      });
+    }
+    getFoo(){
+      return this.foo;
+    }
+  }
+
+  new Game();
 }
