@@ -1,18 +1,12 @@
 "use strict";
 {
   class Panel {
-    constructor(game, Lv) {
+    constructor(game) {
       this.game = game;
-      this.Lv = Lv;
       this.el = document.createElement("li");
       this.el.classList.add("pressed");
-      console.log("foo");
-      console.log(this.game.getLevel());
-      // console.log(this.Lv.getFoo());
-
       this.el.addEventListener("click", () => {
         this.check();
-        
       });
     }
 
@@ -35,10 +29,8 @@
   }
 
   class Board {
-    constructor(game,Lv) {
+    constructor(game) {
       this.game = game;
-      this.Lv = Lv;
-
       this.panels = [];
       for (let i = 0; i < this.game.getLevel() ** 2; i++) {
         this.panels.push(new Panel(this.game));
@@ -69,9 +61,10 @@
   }
 
   class Game {
-    constructor() {
-      this.level = 2;
+    constructor(level) {
+      this.level = level;
       this.board = new Board(this);
+      this.challengeLevel = new ChallengeLevel(this);
       this.currentNum = undefined;
       this.startTime = undefined;
       this.timeoutId = undefined;
@@ -125,24 +118,41 @@
     }
   }
 
-  class Lv {
+  class ChallengeLevel {
     constructor(game) {
       this.game = game;
-      this.foo = undefined;
+      this.panel = new Panel();
+
+      this.challengeLevel = this.game.level;
       const touchLevelButton = document.getElementById("touchLevelButton");
       touchLevelButton.addEventListener("click", () => {
+        this.challengeLevel++;
+        clearTimeout(this.game.getTimeoutId());
         let board = document.getElementById("board");
         while (board.lastChild) {
           board.removeChild(board.lastChild);
-          console.log(this.game.getLevel());
         }
-        new Game(this.nextLevel);
+        const timer = document.getElementById("timer");
+        timer.textContent = "0.0";
+
+        new Game(this.challengeLevel);
       });
-    }
-    getFoo(){
-      return this.foo;
     }
   }
 
-  new Game();
+  let challengeLevel = 2;
+
+  // const touchLevelButton = document.getElementById("touchLevelButton");
+  // touchLevelButton.addEventListener("click", () => {
+  //   // window.location.reload();
+  //   let board = document.getElementById("board");
+  //   while (board.lastChild) {
+  //     board.removeChild(board.lastChild);
+  //   }
+  //   challengeLevel++;
+  //   console.log(challengeLevel);
+  //   new Game(challengeLevel);
+  // });
+
+  new Game(challengeLevel);
 }
