@@ -1,6 +1,6 @@
 "use strict";
 (() => {
-  function rand(max, min) {
+  function rand(min, max) {
     return Math.random() * (max - min) + min;
   }
   class Ball {
@@ -11,19 +11,40 @@
       this.y = 30;
       this.r = 10;
       this.vx = rand(3, 5) * (Math.random() < 0.5 ? 1 : -1);
-      this.vy = rand(3, 5);
-      console.log(this.vx);
-      console.log(this.vy);
+      this.vy = rand(5, 10);
+      this.isMissed = false;
+    }
+    getMissedStatus() {
+      return this.isMissed;
+    }
+    bounce() {
+      this.vy *= -1;
+    }
+    reposition(paddleTop) {
+      this.y = paddleTop - this.r;
+    }
+    getX() {
+      return this.x;
+    }
+    getY() {
+      return this.y;
+    }
+    getR() {
+      return this.r;
     }
 
     update() {
       this.x += this.vx;
       this.y += this.vy;
+      if (this.y - this.r > this.canvas.height) {
+        this.isMissed = true;
+      }
+
       if (this.x - this.r < 0 || this.x + this.r > this.canvas.width) {
         this.vx *= -1;
       }
 
-      if (this.y - this.r < 0 || this.y + this.r > this.canvas.height) {
+      if (this.y - this.r < 0) {
         this.vy *= -1;
       }
     }
@@ -37,7 +58,8 @@
   }
 
   class Paddle {
-    constructor(canvas) {
+    constructor(canvas, game) {
+      this.game = game;
       this.canvas = canvas;
       this.ctx = this.canvas.getContext("2d");
       this.w = 60;
@@ -54,7 +76,25 @@
         this.mouseY = e.clientY;
       });
     }
-    update() {
+    update(ball) {
+      const ballBottom = ball.getY() + ball.getR();
+      const paddleTop = this.y;
+      const ballTop = ball.getY() - ball.getR();
+      const paddleBottom = this.y + this.h;
+      const ballCenter = ball.getX();
+      const paddleLeft = this.x;
+      const paddleRight = this.x + this.w;
+
+      if (
+        ballBottom > paddleTop &&
+        ballTop < paddleBottom &&
+        ballCenter > paddleLeft &&
+        ballCenter < paddleRight
+      ) {
+        ball.bounce();
+        ball.reposition(paddleTop);
+        this.game.addScore();
+      }
       const rect = this.canvas.getBoundingClientRect();
       this.x = this.mouseX - rect.left - this.w / 2;
       this.y = this.mouseY - 25;
@@ -84,11 +124,19 @@
       this.canvas = canvas;
       this.ctx = this.canvas.getContext("2d");
       this.ball = new Ball(this.canvas);
-      this.paddle = new Paddle(this.canvas);
+      this.paddle = new Paddle(this.canvas, this);
       this.loop();
+      this.isGameOver = false;
+      this.score = 0;
+    }
+    addScore() {
+      this.score++;
     }
 
     loop() {
+      if (this.isGameOver) {
+        return;
+      }
       this.update();
       this.draw();
       requestAnimationFrame(() => {
@@ -97,12 +145,33 @@
     }
     update() {
       this.ball.update();
-      this.paddle.update();
+      this.paddle.update(this.ball);
+
+      if (this.ball.getMissedStatus()) {
+        this.isGameOver = true;
+      }
     }
     draw() {
+      if (this.isGameOver) {
+        this.drawGameOver();
+        return;
+      }
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.ball.draw();
       this.paddle.draw();
+      this.drawScore();
+    }
+
+    drawGameOver() {
+      this.ctx.font = '28px "Arial Black"';
+      this.ctx.fillStyle = "tomato";
+      this.ctx.fillText("GameOver", 50, 150);
+    }
+
+    drawScore() {
+      this.ctx.font = "20px Arial";
+      this.ctx.fillStyle = "white";
+      this.ctx.fillText(this.score, 10, 25);
     }
   }
 
