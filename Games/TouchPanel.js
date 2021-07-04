@@ -64,7 +64,7 @@
     constructor(level) {
       this.level = level;
       this.board = new Board(this);
-      this.challengeLevel = new ChallengeLevel(this);
+      this.panel = new Panel();
       this.currentNum = undefined;
       this.startTime = undefined;
       this.timeoutId = undefined;
@@ -75,6 +75,7 @@
       });
       this.setup();
     }
+
     setup() {
       const container = document.getElementById("touchPanel");
       const PANEL_WIDTH = 50;
@@ -118,41 +119,5 @@
     }
   }
 
-  class ChallengeLevel {
-    constructor(game) {
-      this.game = game;
-      this.panel = new Panel();
-
-      this.challengeLevel = this.game.level;
-      const touchLevelButton = document.getElementById("touchLevelButton");
-      touchLevelButton.addEventListener("click", () => {
-        this.challengeLevel++;
-        clearTimeout(this.game.getTimeoutId());
-        let board = document.getElementById("board");
-        while (board.lastChild) {
-          board.removeChild(board.lastChild);
-        }
-        const timer = document.getElementById("timer");
-        timer.textContent = "0.0";
-
-        new Game(this.challengeLevel);
-      });
-    }
-  }
-
-  let challengeLevel = 2;
-
-  // const touchLevelButton = document.getElementById("touchLevelButton");
-  // touchLevelButton.addEventListener("click", () => {
-  //   // window.location.reload();
-  //   let board = document.getElementById("board");
-  //   while (board.lastChild) {
-  //     board.removeChild(board.lastChild);
-  //   }
-  //   challengeLevel++;
-  //   console.log(challengeLevel);
-  //   new Game(challengeLevel);
-  // });
-
-  new Game(challengeLevel);
+  new Game(5);
 }

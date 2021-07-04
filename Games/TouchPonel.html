@@ -93,95 +93,16 @@
       </nav>
     </header>
     <!-- ヘッダー -->
-
     <div class="g-container">
-      <!-- ゲームタイトル -->
-
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-        <!-- タッチパネル -->
-
-        <div class="col">
-          <div class="card">
-            <a href="../Games/TouchPonel.html"
-              ><img
-                src="../image/GAME/PANEL_Card.png"
-                class="card-img-top"
-                alt="..."
-            /></a>
-            <div class="card-body">
-              <a href="../Games/TouchPonel.html"
-                ><h5 class="card-title">Touch Panel Game</h5></a
-              >
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- タッチパネル -->
-
-        <!-- ピンポンゲーム -->
-
-        <div class="col">
-          <div class="card">
-            <a href="../Games/pinpong.html"
-              ><img
-                src="../image/GAME/PINGPONG-Card.png"
-                class="card-img-top"
-                alt="..."
-            /></a>
-            <div class="card-body">
-              <a href="../Games/pinpong.html"
-                ><h5 class="card-title">Ping Pong Game</h5></a
-              >
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- ピンポンゲーム -->
-
-        <div class="col">
-          <div class="card">
-            <img
-              src="../image/GAME/NotReady-Card.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="../image/GAME/NotReady-Card.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
+      <!-- タッチパネル -->
+      <div class="touchPanelBase">
+        <div id="touchPanel">
+          <div id="timer">0.0</div>
+          <ul id="board"></ul>
+          <div id="touchPanelButton">START</div>
         </div>
       </div>
-      <!-- ゲームタイトル -->
+      <!-- タッチパネル -->
     </div>
     <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
@@ -190,5 +111,6 @@
       src="https://kit.fontawesome.com/41c4b13d5c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="TouchPanel.js"></script>
   </body>
 </html>

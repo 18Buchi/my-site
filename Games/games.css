@@ -4,7 +4,9 @@
 }
 
 .touchPanelBase {
-  background: #ccc;
+  background-image: url(../image/GAME/PANEL.png);
+  background-size: 600px;
+  opacity: .9;
   color: #fff;
   font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
@@ -24,14 +26,13 @@
 }
 
 #board {
-  
   list-style: none;
   margin: 0 0 8px;
   padding: 10px;
   background: #fff;
   border-radius: 4px;
-  /* display: -webkit-box;
-  display: -ms-flexbox; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -67,7 +68,7 @@
   text-align: right;
 }
 
-#touchPanelButton, #touchLevelButton {
+#touchPanelButton {
   margin-top: 15px;
   cursor: pointer;
   -webkit-user-select: none;

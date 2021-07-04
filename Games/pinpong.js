@@ -97,7 +97,7 @@
       }
       const rect = this.canvas.getBoundingClientRect();
       this.x = this.mouseX - rect.left - this.w / 2;
-      this.y = this.mouseY - 25;
+      this.y = this.mouseY - 110;
 
       if (this.x < 0) {
         this.x = 0;
