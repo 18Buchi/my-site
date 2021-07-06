@@ -5,11 +5,50 @@
       const section = document.createElement("section");
       section.classList.add("panel");
 
+      this.timeoutId = undefined;
+
       this.img = document.createElement("img");
       this.img.src = "../../image/GAME/SLOT/001.jpg";
       this.stop = document.createElement("div");
       this.stop.textContent = "STOP";
       this.stop.classList.add("stop");
+      this.stop.addEventListener("click", () => {
+        clearTimeout(this.timeoutId);
+      });
+
+      section.appendChild(this.img);
+      section.appendChild(this.stop);
+
+      const main = document.querySelector("main");
+      main.appendChild(section);
+    }
+    getRandomImage() {
+      const images = [
+        "../../image/GAME/SLOT/001.jpg",
+        "../../image/GAME/SLOT/002.jpg",
+        "../../image/GAME/SLOT/004.jpg",
+        "../../image/GAME/SLOT/005.jpg",
+        "../../image/GAME/SLOT/006.jpg",
+        "../../image/GAME/SLOT/007.jpg",
+        "../../image/GAME/SLOT/008.jpg",
+      ];
+      return images[Math.floor(Math.random() * images.length)];
+    }
+
+    spin() {
+      this.img.src = this.getRandomImage();
+      this.timeoutId = setTimeout(() => {
+        this.spin();
+      }, 50);
     }
   }
+
+  const panels = [new Panel(), new Panel(), new Panel()];
+
+  const spin = document.getElementById("spin");
+  spin.addEventListener("click", () => {
+    panels.forEach((panel) => {
+      panel.spin();
+    });
+  });
 }
