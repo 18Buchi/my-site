@@ -6,6 +6,7 @@
   font-size: 16px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
 }
 
 main {
@@ -26,6 +27,7 @@ main {
 .panel img {
   width: 90px;
   height: 90px;
+  
 }
 
 .stop {
@@ -62,5 +64,12 @@ main {
       -ms-user-select: none;
           user-select: none;
   margin: 0 auto;
+}
+
+.unmatched{
+opacity: 0.3;
+}
+.inactive{
+opacity: 0.3;
 }
 /*# sourceMappingURL=slot.css.map */
