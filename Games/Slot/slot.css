@@ -6,7 +6,6 @@
   font-size: 16px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  user-select: none;
 }
 
 main {
@@ -25,14 +24,14 @@ main {
 }
 
 .panel img {
-  width: 90px;
-  height: 90px;
-  
+  width: 100%;
+  padding: 0 5px 10%;
+  margin: 0 auto;
 }
 
 .stop {
   cursor: pointer;
-  width: 90px;
+  width: 80%;
   height: 32px;
   background: #ef454a;
   -webkit-box-shadow: 0 4px 0 #d1483e;
@@ -46,6 +45,7 @@ main {
       -ms-user-select: none;
           user-select: none;
   font-size: 14px;
+  margin: 0 auto;
 }
 
 #spin {
@@ -66,10 +66,32 @@ main {
   margin: 0 auto;
 }
 
-.unmatched{
-opacity: 0.3;
+.unmatched {
+  opacity: 0.3;
 }
-.inactive{
-opacity: 0.3;
+
+.inactive {
+  opacity: 0.3;
+}
+
+@media (max-width: 991.98px) {
+  .s-container {
+    width: 80%;
+  }
+  .stop {
+    height: 28px;
+    border-radius: 14px;
+    line-height: 28px;
+    font-size: 10x;
+  }
+}
+
+@media (max-width: 500px) {
+  .stop {
+    height: 16px;
+    border-radius: 8px;
+    line-height: 16px;
+    font-size: 3px;
+  }
 }
 /*# sourceMappingURL=slot.css.map */

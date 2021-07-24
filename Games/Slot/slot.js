@@ -11,19 +11,18 @@
       this.img.src = "../../image/GAME/SLOT/001.jpg";
       this.stop = document.createElement("div");
       this.stop.textContent = "STOP";
-      this.stop.classList.add("stop");
+      this.stop.classList.add("stop","inactive");
       this.stop.addEventListener("click", () => {
-        if(this.stop.classList.contains("inactive")){
+        if (this.stop.classList.contains("inactive")) {
           return;
         }
-        this.stop.classList.add("inactive")
+        this.stop.classList.add("inactive");
         clearTimeout(this.timeoutId);
         panelsLeft--;
         if (panelsLeft === 0) {
           spin.classList.remove("inactive");
           panelsLeft = 3;
           checkResult();
-          
         }
       });
 
@@ -34,7 +33,8 @@
       main.appendChild(section);
     }
     getRandomImage() {
-      const images = [
+      const images = 
+      [
         "../../image/GAME/SLOT/001.jpg",
         "../../image/GAME/SLOT/002.jpg",
         "../../image/GAME/SLOT/004.jpg",
@@ -59,6 +59,10 @@
     unmatched() {
       this.img.classList.add("unmatched");
     }
+    activate() {
+      this.img.classList.remove("unmatched");
+      this.stop.classList.remove("inactive");
+    }
   }
 
   function checkResult() {
@@ -79,13 +83,13 @@
 
   const spin = document.getElementById("spin");
   spin.addEventListener("click", () => {
-    if(spin.classList.contains("inactive")){
+    if (spin.classList.contains("inactive")) {
       return;
     }
-    spin.classList.add("inactive")
+    spin.classList.add("inactive");
     panels.forEach((panel) => {
+      panel.activate();
       panel.spin();
     });
-    
   });
 }
