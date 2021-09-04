@@ -77,17 +77,6 @@
                 >
               </li>
             </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
@@ -113,7 +102,8 @@
                 ><h5 class="card-title">Touch Panel Game</h5></a
               >
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quasi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
+                quasi.
               </p>
             </div>
           </div>
@@ -136,41 +126,35 @@
                 <h5 class="card-title">Slot Game</h5>
               </a>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, voluptas?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                voluptas?
               </p>
             </div>
           </div>
         </div>
 
-
         <!-- スロット -->
-
-
-
 
         <!-- ピンポンゲーム -->
 
         <div class="col">
-          <div class="card">
-            <a href="../Games/pinpong.html"
-              ><img
-                src="../image/GAME/PINGPONG-Card.png"
-                class="card-img-top"
-                alt="..."
-            /></a>
+          <div id="p-btn" class="card">
+            ><img
+              src="../image/GAME/PINGPONG-Card.png"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
-              <a href="../Games/pinpong.html"
-                ><h5 class="card-title">Ping Pong Game</h5></a
-              >
+              <h5 class="card-title">Ping Pong Game</h5>
               <p class="card-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ipsam?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, ipsam?
               </p>
             </div>
           </div>
         </div>
 
         <!-- ピンポンゲーム -->
-
 
         <div class="col">
           <div class="card">
@@ -182,7 +166,8 @@
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, in.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+                in.
               </p>
             </div>
           </div>
@@ -197,5 +182,18 @@
       src="https://kit.fontawesome.com/41c4b13d5c.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- ピンポンゲーム確認分岐 -->
+    <script>
+      let btn = document.getElementById("p-btn");
+      btn.addEventListener("click", function () {
+        if (confirm("このゲームはマウス操作専用ですが、宜しいですか")) {
+          location.href = "../Games/pinpong.html";
+        } else {
+          return;
+        }
+      });
+    </script>
+    <!-- ピンポンゲーム確認分岐 -->
   </body>
 </html>

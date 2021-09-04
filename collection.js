@@ -72,10 +72,19 @@
         .attr("href", items[i].link)
         .attr("target", "_blank")
         .appendTo(".c-items");
+        
+        
       // $(".card-img-top, .card-title, .btn btn-primary")
       //   .wrapAll("<div>")
       //   .appendTo(".c-items");
       // console.log(cards[i]);
     }
-  });
+    $(".btn").on("click",function(){
+      if(!confirm('外部サイト【SUZURI】に飛びます。宜しいですか？')){
+          return false;
+      }else{
+          location.href = items[i].src;
+      }
+  });}
+  );
 }
