@@ -2,18 +2,21 @@
 {
   // トップボタン
   const footer = document.getElementById("footer");
-  footer.style.color = "white";
-  footer.style.backgroundColor = "#023178";
+  // footer.style.color = "white";
   footer.style.height = "250px";
   footer.style.padding = "30px";
+  footer.style.borderTop = "thin solid black";
 
+  let div = document.createElement("div");
   let topBtn = document.createElement("a");
   topBtn.innerHTML = "Top Button";
-  footer.appendChild(topBtn);
-  topBtn.classList.add("btn", "btn-light");
+  footer.appendChild(div);
+  div.appendChild(topBtn);
+  topBtn.classList.add("btn", "btn-secondary");
   topBtn.style.fontWeight = "bold";
 
   // 外部サイトアイコン
+
   let nav = document.createElement("nav");
   let ul = document.createElement("ul");
 
@@ -54,27 +57,21 @@
     icon.style.borderRadius = "7px";
     icon.style.float = "left";
     li.style.listStyle = "none";
-    
   }
   ul.style.margin = "0px";
   ul.style.padding = "0px";
-  ul.style.display = "inline";
-
-  
+  ul.style.display = "block";
 
   // フォーム
   let ulForm = document.createElement("ul");
-  
-
 
   footer.appendChild(ulForm);
-  
 
   let form = [
     {
       src: "#",
       title: "お問合せ",
-      link: "#",
+      link: "./",
     },
     {
       src: "#",
@@ -83,7 +80,7 @@
     },
     {
       src: "#",
-      title: "Copy",
+      title: "©︎ 2020 Buchi Inc. All Rights Reserved.",
       link: "#",
     },
   ];
@@ -91,11 +88,16 @@
   for (let i = 0; i < form.length; i++) {
     let liForm = document.createElement("li");
     let linkForm = document.createElement("a");
-    liForm.innerHTML = form[i].title;
+    linkForm.setAttribute("href", form[i].link);
+    linkForm.innerHTML = form[i].title;
+
     ulForm.appendChild(liForm);
+    liForm.appendChild(linkForm);
     liForm.style.float = "left";
     liForm.style.paddingLeft = "2vw";
     liForm.style.listStyle = "none";
+    linkForm.style.textDecoration = "none";
+    linkForm.style.color = "black";
   }
   ulForm.style.padding = "0px";
   // ulForm.style.position = "relative";
@@ -103,5 +105,4 @@
   ulForm.style.marginTop = "80px";
   ulForm.style.marginRight = "2vw";
   // ulForm.style.marginLeft = "60vw";
-  
 }
