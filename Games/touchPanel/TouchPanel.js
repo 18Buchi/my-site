@@ -64,7 +64,7 @@
     constructor(level) {
       this.level = level;
       this.board = new Board(this);
-      this.panel = new Panel();
+      // this.panel = new Panel();
       this.currentNum = undefined;
       this.startTime = undefined;
       this.timeoutId = undefined;
@@ -119,5 +119,5 @@
     }
   }
 
-  new Game(4);
+  new Game(5);
 }

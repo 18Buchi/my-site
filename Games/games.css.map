@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,MAAM,EAAE,UAAU;EAClB,KAAK,EAAE,KAAK;CACb",
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,MAAM,EAAE,UAAU;EAClB,KAAK,EAAE,KAAK;CACb;;AAED,MAAM,EAAE,SAAS,EAAE,QAAQ;EACzB,AAAA,YAAY,CAAC;IACX,KAAK,EAAE,GAAG;GACX",
     "sources": [
         "games.scss"
     ],
