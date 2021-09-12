@@ -54,25 +54,25 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"
+                <a class="nav-link" href="../OutLink/twitter.html"
                   ><i class="fab fa-twitter-square"> twitter</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../OutLink/instagram.html"
+                  ><i class="fab fa-instagram-square"> instagram</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../OutLink/github.html"
+                  ><i class="fab fa-github-square"> github</i></a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="https://www.instagram.com/18buchi/"
+                  href="https://suzuri.jp/Buchi18"
                   target="_blank"
-                  ><i class="fab fa-instagram-square"> instagram</i></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><i class="fab fa-github-square"> github</i></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"
                   ><i class="fas fa-square"> suzuri</i></a
                 >
               </li>
@@ -91,14 +91,14 @@
 
         <div class="col">
           <div class="card">
-            <a href="../Games/TouchPonel.html"
+            <a href="./touchPanel/TouchPanel.html"
               ><img
                 src="../image/GAME/PANEL_Card.png"
                 class="card-img-top"
                 alt="..."
             /></a>
             <div class="card-body">
-              <a href="../Games/TouchPonel.html"
+              <a href="./touchPanel/TouchPanel.html"
                 ><h5 class="card-title">Touch Panel Game</h5></a
               >
               <p class="card-text">
@@ -145,8 +145,10 @@
               alt="..."
             />
             <div class="card-body">
-              <a id="p-btn" href="#!"><h5 class="card-title">Ping Pong Game</h5></a>
-              
+              <a id="p-btn" href="#!"
+                ><h5 class="card-title">Ping Pong Game</h5></a
+              >
+
               <p class="card-text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam, ipsam?
@@ -177,6 +179,9 @@
       </div>
       <!-- ゲームタイトル -->
     </div>
+
+    <footer id="footer"></footer>
+
     <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -184,13 +189,14 @@
       src="https://kit.fontawesome.com/41c4b13d5c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../Footer/footer2nd.js"></script>
 
     <!-- ピンポンゲーム確認分岐 -->
     <script>
       let btn = document.getElementById("p-btn");
       btn.addEventListener("click", function () {
         if (confirm("このゲームはマウス操作専用ですが、宜しいですか")) {
-          location.href = "../Games/pinpong.html";
+          location.href = "./pingpong/pinpong.html";
         } else {
           return;
         }

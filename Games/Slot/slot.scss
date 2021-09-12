@@ -2,10 +2,18 @@
   margin: 110px auto;
   padding: 20px;
   width: 800px;
-  background: rgb(151, 151, 151);
+
   font-size: 16px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.s-bg {
+  padding: 20px;
+  background-image: url(../../image/topImage/top.jpg);
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: lighten;
 }
 
 main {
@@ -73,11 +81,11 @@ main {
     font-size: 10x;
   }
 }
-@media (max-width: 500px) {
-  .stop {
-    height: 16px;
-    border-radius: 8px;
-    line-height: 16px;
-    font-size: 3px;
-  }
-}
+// @media (max-width: 500px) {
+//   .stop {
+//     height: 16px;
+//     border-radius: 8px;
+//     line-height: 16px;
+//     font-size: 8px;
+//   }
+// }

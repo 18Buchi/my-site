@@ -1,0 +1,97 @@
+.touchPanelBase {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.touchBg {
+  padding: 20px;
+  background-image: url(../../image/GAME/PANEL.png);
+  background-size: 600px;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+}
+
+#touchPanel {
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#board {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#board li {
+  background: #0af;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 0 #08c;
+          box-shadow: 0 4px 0 #08c;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#board li.pressed {
+  background: #ccc;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 9px 5px 1px;
+}
+
+#timer {
+  color: black;
+  margin-bottom: 8px;
+  font-size: 20px;
+  text-align: right;
+}
+
+#touchPanelButton {
+  margin-top: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #f44336;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 0 #d1483e;
+          box-shadow: 0 4px 0 #d1483e;
+}
+
+#touchPanelButton:active,
+#touchLevelButton:active {
+  opacity: 0.6;
+}
+
+@media (max-width: 991.98px) {
+  .g-container {
+    width: 92%;
+  }
+}
+/*# sourceMappingURL=touchPanel.css.map */
