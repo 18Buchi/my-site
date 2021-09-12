@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/costom.css" />
+    <title>My-site</title>
+  </head>
+
+  <body>
+     <!-- ヘッダー -->
+     <header>
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-light
+          bg-white
+          fixed-top
+          zindex-fixed
+          border-bottom border-dark
+        "
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              class="c-mainIcon"
+              src="../image/icon/BUCHI.png"
+              alt="メインアイコン"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active twitter"
+                  aria-current="page"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../OutLink/twitter.html"
+                  ><i class="fab fa-twitter-square"> twitter</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../OutLink/instagram.html"
+                  
+                  ><i class="fab fa-instagram-square"> instagram</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../OutLink/github.html"
+                  ><i class="fab fa-github-square"> github</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://suzuri.jp/Buchi18" target="_blank"
+                  ><i class="fas fa-square"> suzuri</i></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ヘッダー -->
+    <div class="c-container" id="c-container">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Example textarea</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/41c4b13d5c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Footer/footer2nd.js"></script>
+  </body>
+</html>

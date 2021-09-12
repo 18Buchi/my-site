@@ -2,7 +2,6 @@
 {
   // トップボタン
   const footer = document.getElementById("footer");
-  // footer.style.color = "white";
   footer.style.height = "250px";
   footer.style.padding = "30px";
   footer.style.borderTop = "thin solid black";
@@ -10,6 +9,7 @@
   let div = document.createElement("div");
   let topBtn = document.createElement("a");
   topBtn.innerHTML = "Top Button";
+  topBtn.setAttribute("href", "./index.html");
   footer.appendChild(div);
   div.appendChild(topBtn);
   topBtn.classList.add("btn", "btn-secondary");
@@ -26,31 +26,41 @@
   let footerIcon = [
     {
       src: "./image/icon/icon001.jpg",
+      art:"twitterIcon",
       title: "1",
-      link: "#",
+      link: "./OutLink/twitter.html",
     },
     {
       src: "./image/icon/icon002.jpg",
+      art:"instagramIcon",
       title: "2",
-      link: "#",
+      link: "./OutLink/instagram.html",
     },
     {
       src: "./image/icon/icon003.jpg",
-      title: "2",
-      link: "#",
+      art:"githubIcon",
+      title: "3",
+      link: "./OutLink/github.html",
     },
     {
       src: "./image/icon/icon004.jpg",
-      title: "2",
-      link: "#",
+      art:"suzuriIcon",
+      title: "3",
+      link: "https://suzuri.jp/Buchi18",
     },
   ];
   for (let i = 0; i < footerIcon.length; i++) {
+    let outLink = document.createElement("a");
     let li = document.createElement("li");
     let icon = document.createElement("img");
-    icon.src = footerIcon[i].src;
+
     ul.appendChild(li);
-    li.appendChild(icon);
+    li.appendChild(outLink);
+    outLink.setAttribute("href", footerIcon[i].link);
+    outLink.appendChild(icon);
+    icon.setAttribute("src", footerIcon[i].src);
+    icon.setAttribute("art", footerIcon[i].art);
+
     icon.style.width = "30px";
     icon.style.marginTop = "2vh";
     icon.style.marginRight = "2vw";
@@ -69,17 +79,14 @@
 
   let form = [
     {
-      src: "#",
       title: "お問合せ",
-      link: "./",
+      link: "./Form/form.html",
     },
     {
-      src: "#",
       title: "免責事項",
-      link: "#",
+      link: "./Form/privacy.html",
     },
     {
-      src: "#",
       title: "©︎ 2020 Buchi Inc. All Rights Reserved.",
       link: "#",
     },
@@ -88,8 +95,8 @@
   for (let i = 0; i < form.length; i++) {
     let liForm = document.createElement("li");
     let linkForm = document.createElement("a");
-    linkForm.setAttribute("href", form[i].link);
     linkForm.innerHTML = form[i].title;
+    linkForm.setAttribute("href", form[i].link);
 
     ulForm.appendChild(liForm);
     liForm.appendChild(linkForm);
@@ -100,9 +107,7 @@
     linkForm.style.color = "black";
   }
   ulForm.style.padding = "0px";
-  // ulForm.style.position = "relative";
   ulForm.style.float = "right";
   ulForm.style.marginTop = "80px";
   ulForm.style.marginRight = "2vw";
-  // ulForm.style.marginLeft = "60vw";
 }

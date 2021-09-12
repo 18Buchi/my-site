@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./css/costom.css" />
+    <link rel="stylesheet" href="../css/costom.css" />
     <title>My-site</title>
   </head>
+
   <body>
     <!-- ヘッダー -->
     <header>
@@ -24,10 +25,10 @@
         "
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html"
+          <a class="navbar-brand" href="../index.html"
             ><img
               class="c-mainIcon"
-              src="./image/icon/BUCHI.png"
+              src="../image/icon/BUCHI.png"
               alt="メインアイコン"
           /></a>
           <button
@@ -44,20 +45,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active twitter"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#"
                   ><i class="fab fa-twitter-square"> twitter</i></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"
+                <a
+                  class="nav-link"
+                  href="https://www.instagram.com/18buchi/"
+                  target="_blank"
                   ><i class="fab fa-instagram-square"> instagram</i></a
                 >
               </li>
@@ -77,18 +73,23 @@
       </nav>
     </header>
     <!-- ヘッダー -->
+    <div class="c-container" id="c-container">
+      <!-- 本文 -->
 
-    <div class="c-container mx-auto" style="width: 70%">
-      <div class="c-items"></div>
+      <h1 class="p-5 text-center font-monospace fw-bold">instagram</h1>
+
+      <!-- 本文 -->
     </div>
 
-    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="collection.js"></script>
+    <footer id="footer"></footer>
+
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script
       src="https://kit.fontawesome.com/41c4b13d5c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../Footer/footer2nd.js"></script>
   </body>
 </html>
