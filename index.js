@@ -39,6 +39,61 @@ window.addEventListener("load", async function () {
   }
 });
 
+var topic = [
+  {
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi esse aliquid assumenda facere minima accusamus, autem ipsum eum repudiandae iste rerum fugiat nemo sit recusandae nostrum! Aliquid itaque hic perspiciatis?",
+    src: "./image/topic/topic001.jpg",
+    alt: "image01",
+    id: "1",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit porro asperiores sit iure omnis minima, commodi quia neque voluptas. Recusandae iusto voluptatum quo culpa nostrum fugit dolor similique, animi dolores.",
+    src: "./image/topic/topic002.jpg",
+    alt: "image01",
+    id: "2",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda repellat fugiat dolor culpa fugit! Ducimus eligendi in tempore quisquam necessitatibus. Ut neque tempore saepe autem veritatis molestiae perferendis dolor.",
+    src: "./image/topic/topic003.jpg",
+    alt: "image01",
+    id: "3",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor corporis quam quasi commodi doloribus sequi consequuntur nemo deleniti voluptatem. Necessitatibus quam rerum alias, eius rem sit numquam quas. Harum?",
+    src: "./image/topic/topic004.jpg",
+    alt: "image01",
+    id: "4",
+  },
+];
+
+for (var i = 0; i < topic.length; i++) {
+  const list = document.getElementById("list");
+  var div = document.createElement("div");
+  var div2 = document.createElement("div");
+  var li = document.createElement("li");
+  var img = document.createElement("img");
+  li.textContent = topic[i].text;
+  list.appendChild(div);
+  div.appendChild(div2);
+  div2.appendChild(img);
+  div2.appendChild(li);
+  img.setAttribute("src", topic[i].src);
+  div.classList.add("card", "mt-5");
+  div2.classList.add("p-5");
+  li.classList.add("d-inline", "p-2", "mt-3");
+  
+  img.style.width = "30%";
+  img.style.minWidth = "130px";
+
+  if(topic[i].id %2 === 0){
+    img.classList.add("float-end");
+    img.style.marginLeft = "25px";
+  }else{
+    img.classList.add("float-start");
+    img.style.marginRight = "25px";
+  }
+}
+
 // 記事を閉じる時の処理
 close.addEventListener("click", function () {
   popCard.classList.remove("c-show-card");
