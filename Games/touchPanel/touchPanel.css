@@ -69,21 +69,6 @@
   text-align: right;
 }
 
-#touchPanelButton {
-  margin-top: 15px;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background: #f44336;
-  padding: 8px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-shadow: 0 4px 0 #d1483e;
-          box-shadow: 0 4px 0 #d1483e;
-}
-
 #touchPanelButton:active,
 #touchLevelButton:active {
   opacity: 0.6;

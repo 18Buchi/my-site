@@ -55,7 +55,6 @@ article {
     margin-bottom: 30px;
     border-radius: 5px;
     box-shadow: 3px 3px 1px 1px rgba(145, 145, 145, 0.1);
-    // list-style-position:inside ;
   }
 
   .list-wrapper:hover {
@@ -89,49 +88,9 @@ article {
   font-size: 1rem;
 }
 
-.c-carousel {
-  width: 80%;
-  height: 250px;
-  margin: 50px auto;
-  overflow: hidden;
-  position: relative;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-
-    li {
-      height: 100%;
-      min-width: 100%;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
+#topicList {
+  padding: 0;
 }
-#prev,
-#next {
-  position: absolute;
-  top: 100%;
-  transform: translateY(-100%);
-  border: none;
-  background-color: rgba(0,0,0,0.5);
-  font-size: 2rem;
-  color: white;
-  padding: 0 10px 5px;
-}
-#prev {
-  left: 0px;
-}
-#next {
-  right: 0px;
-}
-
 
 @media (max-width: 991.98px) {
   .c-container {
@@ -140,9 +99,4 @@ article {
   .c-contents {
     width: 88%;
   }
-  // .c-card {
-  //   img {
-  //   max-width: 50%;
-  //   }
-  // }
 }

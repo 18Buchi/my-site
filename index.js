@@ -39,6 +39,7 @@ window.addEventListener("load", async function () {
   }
 });
 
+// NEW TOPIC
 var topic = [
   {
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi esse aliquid assumenda facere minima accusamus, autem ipsum eum repudiandae iste rerum fugiat nemo sit recusandae nostrum! Aliquid itaque hic perspiciatis?",
@@ -67,13 +68,13 @@ var topic = [
 ];
 
 for (var i = 0; i < topic.length; i++) {
-  const list = document.getElementById("list");
+  const topicList = document.getElementById("topicList");
   var div = document.createElement("div");
   var div2 = document.createElement("div");
   var li = document.createElement("li");
   var img = document.createElement("img");
   li.textContent = topic[i].text;
-  list.appendChild(div);
+  topicList.appendChild(div);
   div.appendChild(div2);
   div2.appendChild(img);
   div2.appendChild(li);
@@ -81,18 +82,19 @@ for (var i = 0; i < topic.length; i++) {
   div.classList.add("card", "mt-5");
   div2.classList.add("p-5");
   li.classList.add("d-inline", "p-2", "mt-3");
-  
+
   img.style.width = "30%";
   img.style.minWidth = "130px";
 
-  if(topic[i].id %2 === 0){
+  if (topic[i].id % 2 === 0) {
     img.classList.add("float-end");
     img.style.marginLeft = "25px";
-  }else{
+  } else {
     img.classList.add("float-start");
     img.style.marginRight = "25px";
   }
 }
+// NEW TOPIC
 
 // 記事を閉じる時の処理
 close.addEventListener("click", function () {
