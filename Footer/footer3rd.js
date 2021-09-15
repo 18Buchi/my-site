@@ -87,7 +87,7 @@
       link: "../../Form/privacy.html",
     },
     {
-      title: "©︎ 2020 Buchi Inc. All Rights Reserved.",
+      title: "©︎ 2021 Buchi Inc. All Rights Reserved.",
       link: "#",
     },
   ];
