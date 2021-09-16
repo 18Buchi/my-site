@@ -121,15 +121,15 @@
 //   new Game(4);
 // }
 
-'use strict';
+"use strict";
 
 {
   class Panel {
     constructor(game) {
       this.game = game;
-      this.el = document.createElement('li');
-      this.el.classList.add('pressed');
-      this.el.addEventListener('click', () => {
+      this.el = document.createElement("li");
+      this.el.classList.add("pressed");
+      this.el.addEventListener("click", () => {
         this.check();
       });
     }
@@ -139,13 +139,13 @@
     }
 
     activate(num) {
-      this.el.classList.remove('pressed');
+      this.el.classList.remove("pressed");
       this.el.textContent = num;
     }
 
     check() {
       if (this.game.getCurrentNum() === parseInt(this.el.textContent, 10)) {
-        this.el.classList.add('pressed');
+        this.el.classList.add("pressed");
         this.game.addCurrentNum();
 
         if (this.game.getCurrentNum() === this.game.getLevel() ** 2) {
@@ -166,8 +166,8 @@
     }
 
     setup() {
-      const board = document.getElementById('board');
-      this.panels.forEach(panel => {
+      const board = document.getElementById("board");
+      this.panels.forEach((panel) => {
         board.appendChild(panel.getEl());
       });
     }
@@ -178,7 +178,7 @@
         nums.push(i);
       }
 
-      this.panels.forEach(panel => {
+      this.panels.forEach((panel) => {
         const num = nums.splice(Math.floor(Math.random() * nums.length), 1)[0];
         panel.activate(num);
       });
@@ -186,31 +186,32 @@
   }
 
   class Game {
-    constructor(level) {
-      this.level = level;
+    constructor() {
+      this.level = 4;
       this.board = new Board(this);
 
       this.currentNum = undefined;
       this.startTime = undefined;
       this.timeoutId = undefined;
 
-      const btn = document.getElementById('touchPanelButton');
-      btn.addEventListener('click', () => {
+      const btn = document.getElementById("touchPanelButton");
+      btn.addEventListener("click", () => {
         this.start();
       });
       this.setup();
     }
 
     setup() {
-      const container = document.getElementById('touchPanel');
+      const container = document.getElementById("touchPanel");
       const PANEL_WIDTH = 50;
       const BOARD_PADDING = 10;
       /* 50px * 2 + 10px * 2 */
-      container.style.width = PANEL_WIDTH * this.level + BOARD_PADDING * 2 + 'px';
+      container.style.width =
+        PANEL_WIDTH * this.level + BOARD_PADDING * 2 + "px";
     }
 
     start() {
-      if (typeof this.timeoutId !== 'undefined') {
+      if (typeof this.timeoutId !== "undefined") {
         clearTimeout(this.timeoutId);
       }
 
@@ -222,7 +223,7 @@
     }
 
     runTimer() {
-      const timer = document.getElementById('timer');
+      const timer = document.getElementById("timer");
       timer.textContent = ((Date.now() - this.startTime) / 1000).toFixed(2);
 
       this.timeoutId = setTimeout(() => {
@@ -247,5 +248,5 @@
     }
   }
 
-  new Game(5);
+  new Game();
 }
