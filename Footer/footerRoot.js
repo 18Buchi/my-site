@@ -26,25 +26,25 @@
   let footerIcon = [
     {
       src: "./image/icon/icon001.jpg",
-      art:"twitterIcon",
+      art: "twitterIcon",
       title: "1",
       link: "./OutLink/twitter.html",
     },
     {
       src: "./image/icon/icon002.jpg",
-      art:"instagramIcon",
+      art: "instagramIcon",
       title: "2",
       link: "./OutLink/instagram.html",
     },
     {
       src: "./image/icon/icon003.jpg",
-      art:"githubIcon",
+      art: "githubIcon",
       title: "3",
       link: "./OutLink/github.html",
     },
     {
       src: "./image/icon/icon004.jpg",
-      art:"suzuriIcon",
+      art: "suzuriIcon",
       title: "3",
       link: "https://suzuri.jp/Buchi18",
     },
@@ -80,7 +80,7 @@
   let form = [
     {
       title: "お問合せ",
-      link: "./Form/form.html",
+      link: "./Form/form.php",
     },
     {
       title: "免責事項",

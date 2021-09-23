@@ -81,7 +81,14 @@
       </nav>
     </header>
     <!-- ヘッダー -->
+
+    
+
     <div class="c-container" id="c-container">
+
+    <?php
+       echo"aaa";
+    ?>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Email address</label
