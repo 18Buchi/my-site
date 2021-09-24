@@ -103,6 +103,12 @@ article .list-wrapper:hover {
   padding: 0;
 }
 
+.c-topicText::first-line {
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+}
+
 @media (max-width: 991.98px) {
   .c-container {
     width: 92%;

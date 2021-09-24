@@ -42,24 +42,28 @@ window.addEventListener("load", async function () {
 // NEW TOPIC
 var topic = [
   {
+    title: "Title-one",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi esse aliquid assumenda facere minima accusamus, autem ipsum eum repudiandae iste rerum fugiat nemo sit recusandae nostrum! Aliquid itaque hic perspiciatis?",
     src: "./image/topic/topic001.jpg",
     alt: "image01",
     id: "1",
   },
   {
+    title: "Title-two",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit porro asperiores sit iure omnis minima, commodi quia neque voluptas. Recusandae iusto voluptatum quo culpa nostrum fugit dolor similique, animi dolores.",
     src: "./image/topic/topic002.jpg",
     alt: "image01",
     id: "2",
   },
   {
+    title: "Title-three",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda repellat fugiat dolor culpa fugit! Ducimus eligendi in tempore quisquam necessitatibus. Ut neque tempore saepe autem veritatis molestiae perferendis dolor.",
     src: "./image/topic/topic003.jpg",
     alt: "image01",
     id: "3",
   },
   {
+    title: "Title-four",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor corporis quam quasi commodi doloribus sequi consequuntur nemo deleniti voluptatem. Necessitatibus quam rerum alias, eius rem sit numquam quas. Harum?",
     src: "./image/topic/topic004.jpg",
     alt: "image01",
@@ -70,17 +74,21 @@ var topic = [
 for (var i = 0; i < topic.length; i++) {
   const topicList = document.getElementById("topicList");
   var div = document.createElement("div");
+  var title = document.createElement("div");
   var div2 = document.createElement("div");
   var li = document.createElement("li");
   var img = document.createElement("img");
   li.textContent = topic[i].text;
+  title.textContent = topic[i].title;
   topicList.appendChild(div);
+  div.appendChild(title);
   div.appendChild(div2);
   div2.appendChild(img);
   div2.appendChild(li);
   img.setAttribute("src", topic[i].src);
   div.classList.add("card", "mt-5");
-  div2.classList.add("p-5");
+  title.classList.add("fs-5", "fw-bold", "px-4", "m-3");
+  div2.classList.add("px-5", "pb-5");
   li.classList.add("d-inline", "p-2", "mt-3");
 
   img.style.width = "30%";

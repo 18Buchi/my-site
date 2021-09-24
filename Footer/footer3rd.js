@@ -8,7 +8,7 @@
 
   let div = document.createElement("div");
   let topBtn = document.createElement("a");
-  topBtn.innerHTML = "Top Button";
+  topBtn.innerHTML = "Top Page";
   topBtn.setAttribute("href", "../../index.html");
   footer.appendChild(div);
   div.appendChild(topBtn);
@@ -80,7 +80,7 @@
   let form = [
     {
       title: "お問合せ",
-      link: "../../Form/form.php",
+      link: "../../Form/form.html",
     },
     {
       title: "免責事項",

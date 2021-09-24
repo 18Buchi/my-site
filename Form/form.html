@@ -82,35 +82,87 @@
     </header>
     <!-- ヘッダー -->
 
-    
-
+    <!-- お問合せフォーム -->
     <div class="c-container" id="c-container">
+      <div class="wrapper w-75 mx-auto">
+        <h5>お問合せフォーム</h5>
+        <p class="text-danger pb-2">
+          ※テスト用フォームのため、実際に送信はいたしません
+        </p>
 
-    <?php
-       echo"aaa";
-    ?>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Email address</label
+        <!-- STATIC FORMS -->
+        <form
+          action="
+        <!-- https://api.staticforms.xyz/submit -->
+        "
+          method="post"
         >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Example textarea</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-        ></textarea>
+          <div class="nameForm">
+            <p class="mb-0">お名前</p>
+            <input
+              class="p-2 w-100 mt-0 mb-4 border border-secondary"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mailForm">
+            <p class="mb-0">メールアドレス</p>
+            <input
+              class="p-2 w-100 mb-4 border border-secondary"
+              type="text"
+              name="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="categoryForm">
+            <p class="mb-0">お問合せの種類</p>
+            <select
+              class="p-2 w-100 mb-4 border border-secondary"
+              name="$myCustomField1"
+            >
+              <option value="">未選択</option>
+              <option value="">サイトの内容について</option>
+              <option value="">商品について</option>
+              <option value="">その他</option>
+            </select>
+          </div>
+          <div class="textForm">
+            <p class="mb-0">お問合せの内容</p>
+            <textarea
+              class="p-2 w-100 mb-4 border border-secondary"
+              rows="10"
+              name="message"
+            ></textarea>
+            <input type="text" name="honeypot" style="display: none" />
+            <!-- <input
+              type="hidden"
+              name="accessKey"
+              value="d9f4cc72-d912-4c8a-9fa4-95af7330aa89"
+            /> -->
+            <!-- Access Key: d9f4cc72-d912-4c8a-9fa4-95af7330aa89 -->
+          </div>
+          <input
+            type="hidden"
+            name="subject"
+            value="Contact us from - taka25803690@gmail.com"
+          />
+          <input type="hidden" name="replyTo" value="@" />
+
+          <input
+            class="py-2 px-5"
+            type="submit"
+            value="送信"
+            formaction="./completion.html"
+          />
+          <p class="text-danger pb-2">
+            ※テスト用フォームのため、実際に送信はいたしません
+          </p>
+        </form>
+        <!-- STATIC FORMS -->
       </div>
     </div>
+    <!-- お問合せフォーム -->
 
     <footer id="footer"></footer>
 
