@@ -6,7 +6,7 @@ body {
 }
 
 .g-container {
-  margin: 100px auto;
+  margin: 100px auto 250px;
 }
 
 .container {
@@ -64,7 +64,7 @@ body {
   content: " ... wrong!";
 }
 
-#btn.disabled #Commentary.disabled {
+#btn.disabled .disabled {
   background: #ccc;
   opacity: 0.7;
 }

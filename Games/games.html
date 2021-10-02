@@ -117,7 +117,7 @@
           <div class="card">
             <a href="./threeChoice/threeChoice.html">
               <img
-                src="../image/GAME/NotReady-Card.png"
+                src="../image/GAME/THREE-QUESTION_Card.png"
                 class="card-img-top"
                 alt="..."
               />
@@ -138,15 +138,14 @@
         <!-- タッチパネル -->
 
         <div class="col">
-          <div class="card">
-            <a href="./touchPanel/TouchPanel.html"
-              ><img
-                src="../image/GAME/PANEL_Card.png"
-                class="card-img-top"
-                alt="..."
-            /></a>
+          <div id="panelBtn" class="card">
+            <img
+              src="../image/GAME/PANEL_Card.png"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
-              <a href="./touchPanel/TouchPanel.html"
+              <a id="panelBtn" href="#!"
                 ><h5 class="card-title">Touch Panel Game</h5></a
               >
               <p class="card-text">
@@ -161,14 +160,14 @@
         <!-- ピンポンゲーム -->
 
         <div class="col">
-          <div id="p-btn" class="card">
+          <div id="ping-pongBtn" class="card">
             <img
               src="../image/GAME/PINGPONG-Card.png"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <a id="p-btn" href="#!"
+              <a id="ping-pongBtn" href="#!"
                 ><h5 class="card-title">Ping Pong Game</h5></a
               >
 
@@ -198,10 +197,18 @@
 
     <!-- ピンポンゲーム確認分岐 -->
     <script>
-      let btn = document.getElementById("p-btn");
-      btn.addEventListener("click", function () {
+      let pingBtn = document.getElementById("ping-pongBtn");
+      pingBtn.addEventListener("click", function () {
         if (confirm("このゲームはマウス操作専用ですが、宜しいですか")) {
           location.href = "./pingpong/pinpong.html";
+        } else {
+          return;
+        }
+      });
+      let panelBtn = document.getElementById("panelBtn");
+      panelBtn.addEventListener("click", function () {
+        if (confirm("このゲームはブラウザ専用ですが、宜しいですか")) {
+          location.href = "./touchPanel/TouchPanel.html";
         } else {
           return;
         }
